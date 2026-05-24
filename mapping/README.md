@@ -1,9 +1,7 @@
-L'ensemble des scripts est écrit en bash et fait pour être lancer sur un cluster grâce aux premieres lignes (#SBATCH). Peut être modifier en fonction des besoins et des demandes du cluster. 
+All scripts are written in bash and made to be launched on a cluster thanks to the first lines (#SBATCH). Can be modified according to the needs and demands of the cluster.
 
-**Map with reference** : utilise Bowtie pour mapper les raw read le long de séquences de références choisie. 
+**Map with reference** : Uses Bowtie to map raw reads along selected lookup sequences.
 
-**Extract Serratia/Buchnera** : utilise les sortie de map_with_reference.sh (fichier BAM) et extrait les sortie appartenant a Serratia et Buchnera.
+**Make consensus** : uses Bcftools and Samtools to create a consensus sequence for each individual. Uses the output of map_with_reference.sh (BAM file). 
 
-**Make consensus** : utilise Bcftools et Samtools pour créer une séquence consensus pour chaque individu. Utilise les sortie de extract_Buchnera.sh et extract_Serratia.sh (fichier BAM specifique à un symbiote). 
-
-
+**Extract Serratia/Buchnera** : Use the output from make_consensus.sh to extract the consensus sequences for each of *Serratia* or *Buchnera*.
