@@ -1,4 +1,4 @@
-Script allowing the reconstruction of the phylogenies of the symbionts *Buchnera* and *Serratia* in 3 steps. 
+Script allowing the reconstruction of the phylogenies of the symbionts *Buchnera* and *Serratia* in 3 steps. All scripts are written in bash and made to be launched on a cluster thanks to the first lines (#SBATCH). Can be modified according to the needs and demands of the cluster.
 
 Step 1: snippy_SNP_indiv.sh, SNP calling carried out using snippy for each individual in a file. SNPs are relative to a reference sequence provided to the script. 
 
